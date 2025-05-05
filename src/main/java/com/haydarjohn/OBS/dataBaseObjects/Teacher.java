@@ -1,4 +1,4 @@
-package com.haydarjohn.OBS.model;
+package com.haydarjohn.OBS.dataBaseObjects;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

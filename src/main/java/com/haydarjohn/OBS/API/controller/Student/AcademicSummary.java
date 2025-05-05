@@ -1,4 +1,4 @@
-package com.haydarjohn.OBS.API.controller;
+package com.haydarjohn.OBS.API.controller.Student;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -26,7 +26,7 @@ public class AcademicSummary {
     public double calcGPA(String StudentID)
     {
         // TODO: Get Total grades finised;
-        double grade = 0// = getGrades form database
+        double grade = 0;// = getGrades form database
         double creds =    getTotolCreds(StudentID);
         return grade / creds;
     }
