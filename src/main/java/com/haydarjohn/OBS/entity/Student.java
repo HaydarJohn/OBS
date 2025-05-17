@@ -55,10 +55,6 @@ public class Student {
     @Column(name = "advisor_id", length = 10)
     private String advisorId;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "department_id")
-    private Department department;
-
     public Long getId() {
         return id;
     }
@@ -179,11 +175,4 @@ public class Student {
         this.advisorId = advisorId;
     }
 
-    public Department getDepartment() {
-        return department;
-    }
-
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
 }

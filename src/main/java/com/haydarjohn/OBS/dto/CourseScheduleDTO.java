@@ -10,7 +10,7 @@ import java.time.LocalTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class CourseScheduleDTO {
-    private Long id;
+    private String id;
     private Long courseId;
     private Long classroomId;
     private Long semesterId;

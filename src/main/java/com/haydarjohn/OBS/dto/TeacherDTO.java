@@ -12,6 +12,7 @@ public class TeacherDTO {
     private String firstName;
     private String lastName;
     private String email;
-    private String teacherNumber;
-    private Long departmentId;
+    private String phoneNum;
+    private String officeLocation;
+    private String department;
 } 

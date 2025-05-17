@@ -1,16 +1,14 @@
 package com.haydarjohn.OBS.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "administrator", schema = "obs_database")
 public class Administrator {
     @Id
-    @Column(name = "admin_id", nullable = false, length = 10)
-    private String adminId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "admin_id", nullable = false)
+    private Long id;
 
     @Column(name = "first_name", nullable = false, length = 50)
     private String firstName;
@@ -30,12 +28,12 @@ public class Administrator {
     @Column(name = "permissions", length = 100)
     private String permissions;
 
-    public String getAdminId() {
-        return adminId;
+    public Long getId() {
+        return id;
     }
 
-    public void setAdminId(String adminId) {
-        this.adminId = adminId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getFirstName() {
@@ -85,5 +83,4 @@ public class Administrator {
     public void setPermissions(String permissions) {
         this.permissions = permissions;
     }
-
 }

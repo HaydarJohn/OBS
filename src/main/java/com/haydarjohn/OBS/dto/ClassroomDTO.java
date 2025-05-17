@@ -8,9 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ClassroomDTO {
-    private Long id;
-    private String name;
+    private String id;
     private Integer capacity;
     private String building;
-    private String floor;
 } 

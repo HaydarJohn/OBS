@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class Teacher {
     @Id
     @Column(name = "teacher_id", nullable = false, length = 10)
-    private String teacherId;
+    private Long teacherId;
 
     @Column(name = "first_name", nullable = false, length = 50)
     private String firstName;
@@ -44,11 +44,11 @@ public class Teacher {
     @Column(name = "salary")
     private Integer salary;
 
-    public String getTeacherId() {
+    public Long getTeacherId() {
         return teacherId;
     }
 
-    public void setTeacherId(String teacherId) {
+    public void setTeacherId(Long teacherId) {
         this.teacherId = teacherId;
     }
 

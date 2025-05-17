@@ -1,52 +1,30 @@
 package com.haydarjohn.OBS.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "classroom", schema = "obs_database")
 public class Classroom {
     @Id
-    @Column(name = "classroom_id", nullable = false, length = 10)
-    private String classroomId;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "classroom_id", nullable = false)
+    private String id;
 
-    @Column(name = "building", nullable = false, length = 50)
-    private String building;
-
-    @Column(name = "room_number", nullable = false, length = 10)
-    private String roomNumber;
 
     @Column(name = "capacity")
     private Integer capacity;
 
-    @Column(name = "has_projector", length = 3)
-    private String hasProjector;
+    @Column(name = "building", length = 50)
+    private String building;
 
-    public String getClassroomId() {
-        return classroomId;
+    public String getId() {
+        return id;
     }
 
-    public void setClassroomId(String classroomId) {
-        this.classroomId = classroomId;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getBuilding() {
-        return building;
-    }
-
-    public void setBuilding(String building) {
-        this.building = building;
-    }
-
-    public String getRoomNumber() {
-        return roomNumber;
-    }
-
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
 
     public Integer getCapacity() {
         return capacity;
@@ -56,12 +34,11 @@ public class Classroom {
         this.capacity = capacity;
     }
 
-    public String getHasProjector() {
-        return hasProjector;
+    public String getBuilding() {
+        return building;
     }
 
-    public void setHasProjector(String hasProjector) {
-        this.hasProjector = hasProjector;
+    public void setBuilding(String building) {
+        this.building = building;
     }
-
 }

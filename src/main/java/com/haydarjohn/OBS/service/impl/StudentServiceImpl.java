@@ -65,7 +65,17 @@ public class StudentServiceImpl implements StudentService {
         dto.setFirstName(student.getFirstName());
         dto.setLastName(student.getLastName());
         dto.setEmail(student.getEmail());
-        dto.setDepartmentId(student.getDepartment() != null ? student.getDepartment().getId() : null);
+        dto.setPassword(student.getPassword());
+        dto.setPhoneNum(student.getPhoneNum());
+        dto.setAddress(student.getAddress());
+        dto.setDateOfBirth(student.getDateOfBirth());
+        dto.setGender(student.getGender());
+        dto.setTckn(student.getTckn());
+        dto.setMajor(student.getMajor());
+        dto.setEnrollmentDate(student.getEnrollmentDate());
+        dto.setGraduationDate(student.getGraduationDate());
+        dto.setStatus(student.getStatus());
+        dto.setAdvisorId(student.getAdvisorId());
         return dto;
     }
 
@@ -75,6 +85,17 @@ public class StudentServiceImpl implements StudentService {
         student.setFirstName(dto.getFirstName());
         student.setLastName(dto.getLastName());
         student.setEmail(dto.getEmail());
+        student.setPassword(dto.getPassword());
+        student.setPhoneNum(dto.getPhoneNum());
+        student.setAddress(dto.getAddress());
+        student.setDateOfBirth(dto.getDateOfBirth());
+        student.setGender(dto.getGender());
+        student.setTckn(dto.getTckn());
+        student.setMajor(dto.getMajor());
+        student.setEnrollmentDate(dto.getEnrollmentDate());
+        student.setGraduationDate(dto.getGraduationDate());
+        student.setStatus(dto.getStatus());
+        student.setAdvisorId(dto.getAdvisorId());
         return student;
     }
 } 
